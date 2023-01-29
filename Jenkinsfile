@@ -1,6 +1,7 @@
 pipeline {
   agent any
   environment {
+    registry = "registry.bgodley.com"
     outImage = "registry.bgodley.com/roadrunner-site:latest"
   }
 
@@ -41,7 +42,7 @@ pipeline {
     stage("Create docker image") {
       steps {
         withCredentials([usernamePassword(credentialsId: 'docker-registry-credentials', passwordVariable: 'DOCKER_REGISTRY_PASSWORD', usernameVariable: 'DOCKER_REGISTRY_USER')]) {
-          sh 'docker login --username $DOCKER_REGISTRY_USER --password $DOCKER_REGISTRY_PASSWORD'
+          sh 'echo $DOCKER_REGISTRY_PASSWORD | docker login --username $DOCKER_REGISTRY_USER --password-stdin $registry'
           sh 'docker build . --tag="$outImage"'
           sh 'docker push $outImage'
         }
