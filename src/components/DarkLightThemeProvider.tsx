@@ -1,12 +1,11 @@
 import { CssBaseline, ThemeProvider } from "@mui/material"
 import { type PropsWithChildren, type FC } from "react"
+import { useAppSelector } from "store"
 import { lightTheme, darkTheme } from "../theme"
 
-interface DarkLightThemeProviderProps {
-  darkMode: boolean
-};
+const DarkLightThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+  const darkMode: boolean = useAppSelector(state => state.main.darkMode)
 
-const DarkLightThemeProvider: FC<PropsWithChildren<DarkLightThemeProviderProps>> = ({ children, darkMode }) => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline/>

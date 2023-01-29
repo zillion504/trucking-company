@@ -1,22 +1,23 @@
+import { Box } from "@mui/material"
+import DarkLightThemeProvider from "components/DarkLightThemeProvider"
+import Footer from "components/Footer"
+import NavigationBar from "components/NavigationBar"
+import Homepage from "pages/Homepage"
 import { type FC } from "react"
 
 const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkLightThemeProvider>
+      <NavigationBar/>
+      <Box
+        sx={{
+          width: "100%"
+        }}
+      >
+        <Homepage/>
+      </Box>
+      <Footer/>
+    </DarkLightThemeProvider>
   )
 }
 

@@ -1,13 +1,10 @@
-import { createTheme, type ThemeOptions } from "@mui/material/styles"
+import { createTheme, type Shadows, type ThemeOptions } from "@mui/material/styles"
 import { deepmerge } from "@mui/utils"
 
 const themeBase: ThemeOptions = {
   typography: {
     fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      "\"Segoe UI\"",
-      "\"Roboto\"",
+      "\"Heebo\"",
       "\"Helvetica\"",
       "\"Arial\"",
       "sans-serif",
@@ -16,39 +13,67 @@ const themeBase: ThemeOptions = {
       "\"Segoe UI Symbol\""
     ].join(","),
     h1: {
-      fontSize: 48,
-      fontWeight: 600
+      textTransform: "uppercase",
+      fontSize: 80,
+      fontWeight: 600,
+      fontFamily: "Teko",
+      lineHeight: "100%"
     },
     h2: {
-      fontSize: 36,
-      fontWeight: 600
+      fontSize: 48,
+      fontWeight: 600,
+      fontFamily: "Teko",
+      lineHeight: "100%"
+
     },
     h3: {
-      fontSize: 30,
-      fontWeight: 500
+      fontSize: 40,
+      fontWeight: 500,
+      fontFamily: "Teko",
+      lineHeight: "100%"
+
     },
     h4: {
-      fontSize: 26,
-      fontWeight: 500
+      fontSize: 30,
+      fontWeight: 500,
+      fontFamily: "Teko",
+      lineHeight: "100%"
+
     },
     h5: {
-      fontSize: 22,
-      fontWeight: 500
+      fontSize: 26,
+      fontWeight: 500,
+      fontFamily: "Teko",
+      lineHeight: "100%"
+
     },
     h6: {
-      fontSize: 20,
-      fontWeight: 500
+      fontSize: 24,
+      fontWeight: 500,
+      fontFamily: "Teko",
+      lineHeight: "100%"
+
     },
     body1: {
-      fontSize: 16,
-      fontWeight: 400
+      fontSize: 22,
+      fontWeight: 400,
+      lineHeight: "120%"
     },
     body2: {
-      fontSize: 14,
+      fontSize: 22,
       fontWeight: 400
-    }
+    },
+    subtitle1: {
+      fontSize: 22,
+      fontWeight: 400,
+      lineHeight: "130%"
+    },
+    button: {
+      fontWeight: 600
+    },
+    fontSize: 22
   },
-  // shadows: Array(25).fill("none"),
+  shadows: Array(25).fill("none") as Shadows,
   shape: {
     borderRadius: 0
   },
@@ -65,6 +90,13 @@ const themeBase: ThemeOptions = {
           textDecoration: "none"
         }
       }
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          letterSpacing: "1px"
+        }
+      }
     }
   }
 }
@@ -73,12 +105,12 @@ const lightPalette: ThemeOptions = {
   palette: {
     mode: "light",
     primary: {
-      main: "hsl(145, 82.2%, 19.8%)",
+      main: "hsl(0, 82.2%, 40.8%)",
       contrastText: "#fff"
     },
     secondary: {
-      main: "#fff",
-      contrastText: "#000"
+      main: "hsl(0, 5%, 5%)",
+      contrastText: "#fff"
     },
     info: {
       main: "hsl(0, 0%, 40%)"
