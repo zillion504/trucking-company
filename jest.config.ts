@@ -11,7 +11,10 @@ const config: Config = {
   moduleDirectories: ["node_modules", "src"],
   setupFilesAfterEnv: [
     "@testing-library/jest-dom/extend-expect"
-  ]
+  ],
+  moduleNameMapper: {
+    "\\.(jpg|png|gif|svg)$": "<rootDir>/mocks/fileMock.js"
+  }
 }
 
 export default config
