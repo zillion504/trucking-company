@@ -1,8 +1,13 @@
 import { GitHub } from "@mui/icons-material"
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material"
+import { Box, Button, Container, Grid, Stack, Switch, Typography } from "@mui/material"
 import { type FC } from "react"
+import { useAppDispatch, useAppSelector } from "store"
+import { setDarkMode } from "store/features/mainSlice"
 
 const Footer: FC = () => {
+  const dispatch = useAppDispatch()
+  const darkMode = useAppSelector(state => state.main.darkMode)
+
   return <Box
     sx={{
       backgroundColor: theme => theme.palette.primary.main,
@@ -39,6 +44,15 @@ const Footer: FC = () => {
               GitHub
             </Button>
           </Stack>
+        </Grid>
+        <Grid item xs={4}>
+          <Switch 
+            onChange={() => {
+              dispatch(setDarkMode(!darkMode))
+            }}
+            value={darkMode}
+            color="secondary"
+          />
         </Grid>
       </Grid>
     </Container>

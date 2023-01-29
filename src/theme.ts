@@ -117,7 +117,7 @@ const lightPalette: ThemeOptions = {
     },
     common: {
       white: "#fff",
-      black: "#020202"
+      black: "hsl(0, 5%, 5%)"
     },
     background: {
       paper: "hsl(145, 30%, 85.8%)",
@@ -130,23 +130,16 @@ const darkPalette: ThemeOptions = {
   palette: {
     mode: "dark",
     primary: {
-      main: "hsl(145, 72.2%, 35%)",
-      contrastText: "#fff"
-    },
-    info: {
-      main: "hsl(0, 0%, 70%)"
+      main: "hsl(0, 60%, 45%)"
     },
     secondary: {
-      main: "#fff",
-      contrastText: "#000"
+      main: "hsl(0, 100%, 15%)"
     },
     common: {
-      white: "#fff",
-      black: "#020202"
+      black: "hsl(0, 0%, 5%)"
     },
     background: {
-      paper: "hsl(145, 70%, 10%)",
-      default: "hsl(145, 40%, 5%)"
+      default: "hsl(0, 0%, 5%)"
     }
   }
 }

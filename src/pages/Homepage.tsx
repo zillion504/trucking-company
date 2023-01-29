@@ -26,8 +26,8 @@ const Homepage: FC = () => {
         <Typography variant="h2" color="primary">
           WHAT WE OFFER
         </Typography>
-        <Typography variant="body1" color="initial">
-          We offer the following high quality services for a reasonable price:
+        <Typography variant="body1" color="inherit">
+          We offer the following high quality services for a reasonable price both national and local:
         </Typography>
         <List>
           <ListItem>
@@ -109,7 +109,7 @@ const Homepage: FC = () => {
             <Typography variant="h3" color="primary">
               On-Time Delivery
             </Typography>
-            <Typography variant="body1" color="initial">
+            <Typography variant="body1" color="inherit">
               RoadRunner&apos;s 99% on-time delivery rate guarantees your cargo arrives on schedule. 
               Trust in our experienced drivers and technology for real-time updates and peace of mind.
             </Typography>
@@ -118,7 +118,7 @@ const Homepage: FC = () => {
             <Typography variant="h3" color="primary">
               Cargo Expertise
             </Typography>
-            <Typography variant="body1" color="initial">
+            <Typography variant="body1" color="inherit">
               Our experienced drivers are equipped to handle all types of cargo, including machinery, hazmat, livestock, fragile goods. 
             </Typography>
           </Grid>
@@ -126,7 +126,7 @@ const Homepage: FC = () => {
             <Typography variant="h3" color="primary">
               Driver Character
             </Typography>
-            <Typography variant="body1" color="initial">
+            <Typography variant="body1" color="inherit">
               We maintain impeccable standards for driver safety and character. Our drivers undergo regular safety training and evaluations to ensure the highest standards of safety.
             </Typography>
           </Grid>

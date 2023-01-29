@@ -25,8 +25,8 @@ const HeroPage: FC<HeroPageProps> = ({ header, subtitle, button, image, alignmen
       height: "100%",
       backgroundImage: theme => `linear-gradient(
         to bottom,
-        rgba(0,0,0,.2) 0%, 
-        ${theme.palette.secondary.main} 100%), 
+        rgba(0,0,0,.3) 0%, 
+        ${theme.palette.common.black} 100%), 
         url(${image})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",

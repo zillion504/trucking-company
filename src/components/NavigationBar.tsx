@@ -74,7 +74,7 @@ const NavigationBar: FC = () => {
           spacing={1}
           direction="row"
           sx={{
-            color: "#fff"
+            color: theme => theme.palette.secondary.contrastText
           }}
         >
           <Button variant="text" color="inherit">
