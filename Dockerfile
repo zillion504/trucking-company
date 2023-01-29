@@ -1,3 +1,3 @@
 FROM nginx
-LABEL version="1.0"
+LABEL version="1.1"
 COPY ./build /usr/share/nginx/html
