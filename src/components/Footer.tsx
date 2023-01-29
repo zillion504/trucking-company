@@ -53,6 +53,7 @@ const Footer: FC = () => {
             value={darkMode}
             color="secondary"
           />
+          <Typography>Test Adding Something Extra!</Typography>
         </Grid>
       </Grid>
     </Container>
