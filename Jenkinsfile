@@ -24,9 +24,11 @@ pipeline {
     }
     stage("Create docker image") {
       steps {
-        docker.withRegistry("https://registry.bgodley.com/", "docker-registry-credentials") {
-          def appImage = docker.build("roadrunner-site:latest")
-          appImage.push()
+        script {
+          docker.withRegistry("https://registry.bgodley.com/", "docker-registry-credentials") {
+            def appImage = docker.build("roadrunner-site:latest")
+            appImage.push()
+          }
         }
       }
     }
