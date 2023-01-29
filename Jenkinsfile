@@ -5,6 +5,16 @@ pipeline {
   }
 
   stages {
+    stage("Install dependencies") {
+      agent {
+        docker {
+          image "node:alpine"
+        }
+      }
+      steps {
+        sh 'npm ci'
+      }
+    }
     stage("Run Tests") {
       agent {
         docker {
