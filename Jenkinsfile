@@ -1,4 +1,5 @@
 pipeline {
+  agent any
   environment {
     outImage = "registry.bgodley.com/roadrunner-site:latest"
   }
