@@ -1,24 +1,36 @@
 pipeline {
-  agent {
-    docker {
-      image "node:alpine"
-      args "-u root:root"
-    }
-  }
-
-
+  agent any
+  
   stages {
     stage("Install dependencies") {
+      agent {
+        docker {
+          image "node:alpine"
+          args "-u root:root"
+        }
+      }
       steps {
         sh 'npm ci'
       }
     }
     stage("Run Tests") {
+      agent {
+        docker {
+          image "node:alpine"
+          args "-u root:root"
+        }
+      }
       steps {
         sh 'npm run test'
       }
     }
     stage("Build") {
+      agent {
+        docker {
+          image "node:alpine"
+          args "-u root:root"
+        }
+      }
       steps {
         sh 'npm run build'
       }
