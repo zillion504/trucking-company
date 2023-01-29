@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    outImage "registry.bgodley.com/roadrunner-site:latest"
+    outImage = "registry.bgodley.com/roadrunner-site:latest"
   }
 
   stages {
