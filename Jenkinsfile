@@ -9,6 +9,7 @@ pipeline {
       agent {
         docker {
           image "node:alpine"
+          args "-u root:root"
         }
       }
       steps {
@@ -19,6 +20,7 @@ pipeline {
       agent {
         docker {
           image "node:alpine"
+          args "-u root:root"
         }
       }
       steps {
@@ -29,6 +31,7 @@ pipeline {
       agent {
         docker {
           image "node:alpine"
+          args "-u root:root"
         }
       }
       steps {
