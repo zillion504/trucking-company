@@ -39,6 +39,9 @@ pipeline {
       }
     }
     stage("Create docker image") {
+      when {
+        branch "main"
+      }
       steps {
         script {
           docker.withRegistry("https://registry.bgodley.com/", "docker-registry-credentials") {
