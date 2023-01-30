@@ -79,7 +79,7 @@ const Homepage: FC = () => {
       <ThreeColorDivider/>
       <HeroPage
         image={truckImage}
-        header={"Big Rigs, Big Wins"}
+        header={"Big Trucks, Big Bucks"}
         subtitle={"Are you passionate about trucking? Apply to become one of our drivers today and join the club."}
         alignment="left"
         button={
