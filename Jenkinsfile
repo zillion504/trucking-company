@@ -1,12 +1,13 @@
 pipeline {
   agent any
-  
+
   stages {
     stage("Install dependencies") {
       agent {
         docker {
           image "node:alpine"
           args "-u root:root"
+          reuseNode true
         }
       }
       steps {
@@ -18,6 +19,7 @@ pipeline {
         docker {
           image "node:alpine"
           args "-u root:root"
+          reuseNode true
         }
       }
       steps {
@@ -29,6 +31,7 @@ pipeline {
         docker {
           image "node:alpine"
           args "-u root:root"
+          reuseNode true
         }
       }
       steps {
